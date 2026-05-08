@@ -1,4 +1,5 @@
-# Namstr React
+# food-ordering-app
+
 
 # Parcel 
 - Dev Build

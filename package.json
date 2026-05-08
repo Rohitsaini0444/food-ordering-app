@@ -5,7 +5,7 @@
   "keywords": [
     "reacts"
   ],
-  "homepage": "https://github.com/Rohitsaini0444/food-ordering-app#readme",
+  "homepage": "https://github.com/Rohitsaini0444/food-ordering-app/",
   "bugs": {
     "url": "https://github.com/Rohitsaini0444/food-ordering-app/issues"
   },
@@ -18,8 +18,10 @@
   "type": "commonjs",
   "scripts": {
     "test": "jest --coverage",
-    "build": "parcel build index.html",
-    "start": "parcel index.html"
+    "build": "parcel build index.html --public-url ./",
+    "start": "parcel index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@babel/core": "^7.28.5",
@@ -27,6 +29,7 @@
     "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "^16.3.1",
     "babel-jest": "^30.2.0",
+    "gh-pages": "^6.3.0",
     "jest": "^30.2.0",
     "jest-environment-jsdom": "^30.2.0",
     "parcel": "^2.16.1"

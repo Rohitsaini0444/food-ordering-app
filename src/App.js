@@ -27,7 +27,7 @@ const AppLayout = () => {
   }, []);
 
   return (
-    <UserContext.Provider value={{loggedInUser: userName, updateUser: setLoggedInUser}}>
+    <UserContext.Provider value={{ loggedInUser: userName, updateUser: setLoggedInUser }}>
       <div className="app">
         <HeaderComponent />
         <Outlet />
@@ -73,7 +73,7 @@ const appRouter = createBrowserRouter([
     ]
   },
 
-]);
+], { basename: "/food-ordering-app" });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<Provider store={appStore}><RouterProvider router={appRouter} /></Provider>);
